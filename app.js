@@ -17,6 +17,10 @@ app.use('/api/managers', managerRoutes);
 app.use('/api/employees', employeeRoutes);
 
 // Start server
+
+app.get("/", (req, res)=>{
+  res.send("Backend applications is live. You can test APIs with the help of services like Postman, Hoppscotch etc.")
+})
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
   console.log(`Server running on port ${PORT}`);
